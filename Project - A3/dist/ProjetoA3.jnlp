@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="ProjetoA3.jnlp">
+  <information>
+    <title>ProjetoA3</title>
+    <vendor>Danilo</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="ProjetoA3.jar" size="11115" download="eager" />
+    <jar href="lib\mysql-connector-j-8.4.0.jar" size="2533399" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="800" height="600" main-class="projetoa3.ProjetoA3"  name="ProjetoA3" />
+  <update check="always"/>
+</jnlp>
