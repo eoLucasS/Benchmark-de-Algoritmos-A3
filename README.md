@@ -25,7 +25,7 @@ Projeto em Java para comparar a eficiência de busca e ordenação de jogos entr
 - **Busca Linear**
 - **Busca Binária**
 
-## 🛠 Documentação
+## 🛠 Documentação do Código
 
 Toda a documentação do código está presente nos comentários em JavaDoc dentro do código-fonte para facilitar a compreensão das funcionalidades e métodos utilizados.
 
