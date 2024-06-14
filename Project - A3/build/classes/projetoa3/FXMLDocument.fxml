@@ -75,10 +75,10 @@
       <TextField fx:id="tf_ciclo_alg" editable="false" layoutX="153.0" layoutY="767.0" styleClass="textfield" />
       <TextField fx:id="tf_temp_bd" editable="false" layoutX="822.0" layoutY="735.0" styleClass="textfield" />
       <TextField fx:id="tf_ciclo_bd" editable="false" layoutX="822.0" layoutY="767.0" styleClass="textfield" />
-      <Button fx:id="btn_sort_id" layoutX="837.0" layoutY="50.0" minHeight="18.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="234.0" styleClass="btn-buscar" text="Organizar por ID" />
-      <Button fx:id="btn_sort_nome" layoutX="837.0" layoutY="101.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="234.0" styleClass="btn-buscar" text="Organizar por Nome" />
-      <Button fx:id="btn_sort_cat" layoutX="837.0" layoutY="149.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="234.0" styleClass="btn-buscar" text="Organizar por Categoria" />
-      <Button fx:id="btn_sort_lan" layoutX="837.0" layoutY="202.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="234.0" styleClass="btn-buscar" text="Organizar por Lançamento" />
+      <Button fx:id="btn_sort_id" layoutX="837.0" layoutY="50.0" minHeight="18.0" mnemonicParsing="false" onMouseClicked="#handleOrgId" prefHeight="38.0" prefWidth="234.0" styleClass="btn-buscar" text="Organizar por ID" />
+      <Button fx:id="btn_sort_nome" layoutX="837.0" layoutY="101.0" mnemonicParsing="false" onMouseClicked="#handleOrgNome" prefHeight="38.0" prefWidth="234.0" styleClass="btn-buscar" text="Organizar por Nome" />
+      <Button fx:id="btn_sort_cat" layoutX="837.0" layoutY="149.0" mnemonicParsing="false" onMouseClicked="#handleOrgCat" prefHeight="38.0" prefWidth="234.0" styleClass="btn-buscar" text="Organizar por Categoria" />
+      <Button fx:id="btn_sort_lan" layoutX="837.0" layoutY="202.0" mnemonicParsing="false" onMouseClicked="#handleOrgLan" prefHeight="38.0" prefWidth="234.0" styleClass="btn-buscar" text="Organizar por Lançamento" />
       <Label layoutX="19.0" layoutY="204.0" prefHeight="84.0" prefWidth="212.0" styleClass="label-info" text="Array">
          <font>
             <Font size="29.0" />

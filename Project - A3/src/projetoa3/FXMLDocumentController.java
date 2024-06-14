@@ -59,7 +59,6 @@ public class FXMLDocumentController implements Initializable
     
     //declaração do Objeto 
     @FXML private ObservableList<Game> gameData;
-
     
     
     @Override
@@ -75,6 +74,8 @@ public class FXMLDocumentController implements Initializable
         col_nome_alg.setCellValueFactory(new PropertyValueFactory<>("nome"));
         col_cat_alg.setCellValueFactory(new PropertyValueFactory<>("categoria"));
         col_lan_alg.setCellValueFactory(new PropertyValueFactory<>("lancamento"));
+        
+        //declaração dos métodos que devem ser executados nas suas respectivas tabelas
         loadDataFromDatabase();
         loadCSVData();
     }
@@ -134,15 +135,11 @@ public class FXMLDocumentController implements Initializable
     
     //Implementação das Funcionalidades de cada botão
     @FXML
-    private void handleBuscar(MouseEvent event) {
-        loadCSVData();
-        loadDataFromDatabase();
-        tf_ciclo_alg.setText("");
-        tf_ciclo_bd.setText("");
-
+    private void handleBuscar(MouseEvent event) throws SQLException {
         String nome = tf_buscar.getText();
         if (tg_b_linear.isSelected()) {
-            searchLinear(nome);
+            AlgSearchLinear.searchAndUpdateUI(tb_alg_manual.getItems(), nome, tb_alg_manual, tf_ciclo_alg);
+            AlgSearchLinear.searchDatabaseAndUpdateUI(nome, tb_bd, tf_ciclo_bd, getConnection());
         } else if (tg_b_binaria.isSelected()) {
             // Implemente a busca binária
         }
@@ -156,50 +153,53 @@ public class FXMLDocumentController implements Initializable
         tf_ciclo_bd.setText("");
     }
 
-    
-    // Implementação da chamada dos Métodos de Busca MANUAIS do Back-End para as tabelas do Front-End
-    private void searchLinear(String nome) {
+    @FXML
+    private void handleOrgId(MouseEvent event) throws SQLException {
         int[] ciclosAlg = new int[1];
-        Game result = AlgSearchLinear.search(tb_alg_manual.getItems(), nome, ciclosAlg);
-        tf_ciclo_alg.setText(String.valueOf(ciclosAlg[0]));
-
-        if (result != null) {
-            ObservableList<Game> resultData = FXCollections.observableArrayList(result);
-            tb_alg_manual.setItems(resultData);
-        } else {
-            tb_alg_manual.setItems(FXCollections.observableArrayList());
+        if (tg_o_bubble.isSelected()) {
+            AlgSortBubble.sort(tb_alg_manual.getItems(), 0, ciclosAlg);  // Ordenação da tabela em memória
+            tf_ciclo_alg.setText(String.valueOf(ciclosAlg[0])); // Atualiza a contagem de ciclos para a ordenação manual
+            AlgSortBubble.sortDatabaseAndUpdateUI("id", tb_bd, tf_ciclo_bd, getConnection());
+        } else if (tg_o_quick.isSelected()) {
+            // Implemente a ordenação rápida aqui
         }
+    }
 
-        searchLinearInDatabase(nome);
-    }
-    
-    //Implementação da chamada dos Métodos de Busca SQL do Back-End para as tabelas do Front-End
-    private void searchLinearInDatabase(String nome) {
-        int[] ciclosSQL = new int[1];
-        ObservableList<Game> resultData = searchDatabase(nome, ciclosSQL);
-        tf_ciclo_bd.setText(String.valueOf(ciclosSQL[0]));
-        tb_bd.setItems(resultData);
-    }
-    
-    private ObservableList<Game> searchDatabase(String nome, int[] ciclos) {
-        ObservableList<Game> resultData = FXCollections.observableArrayList();
-        ciclos[0] = 0;
-        try (Connection conn = getConnection();
-             Statement stmt = conn.createStatement();
-             ResultSet rs = stmt.executeQuery("SELECT * FROM games WHERE nome = '" + nome + "'")) {
-            while (rs.next()) {
-                ciclos[0]++;
-                Game game = new Game(
-                        rs.getInt("id"),
-                        rs.getString("nome"),
-                        rs.getString("categoria"),
-                        rs.getInt("lancamento")
-                );
-                resultData.add(game);
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
+    @FXML
+    private void handleOrgNome(MouseEvent event) throws SQLException {
+        int[] ciclosAlg = new int[1];
+        if (tg_o_bubble.isSelected()) {
+            AlgSortBubble.sort(tb_alg_manual.getItems(), 1, ciclosAlg);  // Ordenação da tabela em memória
+            tf_ciclo_alg.setText(String.valueOf(ciclosAlg[0]));
+            AlgSortBubble.sortDatabaseAndUpdateUI("nome", tb_bd, tf_ciclo_bd, getConnection());
+        } else if (tg_o_quick.isSelected()) {
+            // Implemente a ordenação rápida aqui
         }
-        return resultData;
     }
+
+    @FXML
+    private void handleOrgCat(MouseEvent event) throws SQLException {
+        int[] ciclosAlg = new int[1];
+        if (tg_o_bubble.isSelected()) {
+            AlgSortBubble.sort(tb_alg_manual.getItems(), 2, ciclosAlg);  // Ordenação da tabela em memória
+            tf_ciclo_alg.setText(String.valueOf(ciclosAlg[0]));
+            AlgSortBubble.sortDatabaseAndUpdateUI("categoria", tb_bd, tf_ciclo_bd, getConnection());
+        } else if (tg_o_quick.isSelected()) {
+            // Implemente a ordenação rápida aqui
+        }
+    }
+
+    @FXML
+    private void handleOrgLan(MouseEvent event) throws SQLException {
+        int[] ciclosAlg = new int[1];
+        if (tg_o_bubble.isSelected()) {
+            AlgSortBubble.sort(tb_alg_manual.getItems(), 3, ciclosAlg);  // Ordenação da tabela em memória
+            tf_ciclo_alg.setText(String.valueOf(ciclosAlg[0]));
+            AlgSortBubble.sortDatabaseAndUpdateUI("lancamento", tb_bd, tf_ciclo_bd, getConnection());
+        } else if (tg_o_quick.isSelected()) {
+            // Implemente a ordenação rápida aqui
+        }
+    }
+
+    
 }
