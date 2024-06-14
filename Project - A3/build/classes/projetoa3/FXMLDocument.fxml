@@ -21,11 +21,7 @@
 
   
       <AnchorPane prefHeight="849.0" prefWidth="1125.0" stylesheets="@styleTables.css">
-         <styleClass>
-            <String fx:value="white-bg" />
-            <String fx:value="shadow" />
-         </styleClass>
-      <GridPane layoutX="365.0" layoutY="53.0" prefHeight="160.0" prefWidth="424.0">
+      <GridPane layoutX="365.0" layoutY="53.0" prefHeight="160.0" prefWidth="424.0" styleClass="grid-view">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -70,38 +66,42 @@
             
          </children>
       </GridPane>
-      <Label layoutX="794.0" layoutY="171.0" prefHeight="84.0" prefWidth="212.0" text="Bando de Dados">
+      <Label layoutX="794.0" layoutY="202.0" prefHeight="84.0" prefWidth="212.0" styleClass="label-info" text="Bando de Dados">
          <font>
             <Font size="29.0" />
          </font>
       </Label>
 
-      <TextField fx:id="tf_buscar" layoutX="452.0" layoutY="269.0" prefHeight="25.0" prefWidth="221.0" promptText="Buscar" />
-      <Button fx:id="btn_buscar" layoutX="514.0" layoutY="306.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="98.0" text="Buscar" />    
+      <TextField fx:id="tf_buscar" layoutX="452.0" layoutY="269.0" prefHeight="25.0" prefWidth="221.0" promptText="Buscar" styleClass="search" />
+      <Button fx:id="btn_buscar" layoutX="514.0" layoutY="311.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="98.0" styleClass="btn-buscar" text="Buscar" />    
             <TableView fx:id="tb_alg_manual" layoutX="14.0" layoutY="269.0" prefHeight="452.0" prefWidth="424.0" AnchorPane.bottomAnchor="128.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="688.0" AnchorPane.topAnchor="269.0">
               <columns>
-                <TableColumn fx:id="col_id" prefWidth="75.0" text="ID" />
-                <TableColumn fx:id="col_nome" prefWidth="112.0" text="NOME" />
-                  <TableColumn fx:id="col_cat" prefWidth="125.0" text="CATEGORIA" />
-                  <TableColumn fx:id="col_lan" prefWidth="110.0" text="LANÇAMENTO" />
+                <TableColumn fx:id="col_id" prefWidth="48.0" resizable="false" text="ID" />
+                <TableColumn fx:id="col_nome" prefWidth="154.0" resizable="false" text="NOME" />
+                  <TableColumn fx:id="col_cat" prefWidth="110.0" resizable="false" text="CATEGORIA" />
+                  <TableColumn fx:id="col_lan" prefWidth="110.0" resizable="false" text="LANÇAMENTO" />
               </columns>
             </TableView>       
             <TableView fx:id="tb_bd" layoutX="688.0" layoutY="269.0" prefHeight="452.0" prefWidth="424.0" AnchorPane.bottomAnchor="128.0" AnchorPane.leftAnchor="688.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="269.0">
               <columns>
-                <TableColumn fx:id="col_id_bd" prefWidth="75.0" text="ID" />
-                <TableColumn fx:id="col_nome_bd" prefWidth="112.0" text="NOME" />
-                  <TableColumn fx:id="col_cat_bd" prefWidth="125.0" text="CATEGORIA" />
-                  <TableColumn fx:id="col_lan_bd" prefWidth="110.0" text="LANÇAMENTO" />
+                <TableColumn fx:id="col_id_bd" prefWidth="48.0" resizable="false" text="ID" />
+                <TableColumn fx:id="col_nome_bd" prefWidth="154.0" resizable="false" text="NOME" />
+                  <TableColumn fx:id="col_cat_bd" prefWidth="110.0" resizable="false" text="CATEGORIA" />
+                  <TableColumn fx:id="col_lan_bd" prefWidth="110.0" resizable="false" text="LANÇAMENTO" />
               </columns>
             </TableView>
       <Label layoutX="14.0" layoutY="731.0" prefHeight="32.0" prefWidth="115.0" text="Tempo de Execução:" />
       <Label layoutX="14.0" layoutY="763.0" prefHeight="32.0" prefWidth="40.0" text="Ciclos:" />
       <Label layoutX="688.0" layoutY="731.0" prefHeight="32.0" prefWidth="115.0" text="Tempo de Execução:" />
       <Label layoutX="688.0" layoutY="763.0" prefHeight="32.0" prefWidth="40.0" text="Ciclos:" />
-      <TextField fx:id="tf_tempExec_alg" editable="false" layoutX="125.0" layoutY="735.0" />
-      <TextField fx:id="tf_ciclo_alg" editable="false" layoutX="50.0" layoutY="767.0" />
-      <TextField fx:id="tf_tempExec_bd" editable="false" layoutX="799.0" layoutY="735.0" />
-      <TextField fx:id="tf_ciclo_bd" editable="false" layoutX="725.0" layoutY="767.0" />
+      <TextField fx:id="tf_tempExec_alg" editable="false" layoutX="125.0" layoutY="735.0" styleClass="textfield" />
+      <TextField fx:id="tf_ciclo_alg" editable="false" layoutX="50.0" layoutY="767.0" styleClass="textfield" />
+      <TextField fx:id="tf_tempExec_bd" editable="false" layoutX="799.0" layoutY="735.0" styleClass="textfield" />
+      <TextField fx:id="tf_ciclo_bd" editable="false" layoutX="725.0" layoutY="767.0" styleClass="textfield" />
+      <styleClass>
+         <String fx:value="bg-color" />
+         <String fx:value="shadow" />
+      </styleClass>
       
       </AnchorPane>
  
