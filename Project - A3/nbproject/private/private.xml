@@ -3,9 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Estudos%20DEV/ProjetoA3/src/projetoa3/FXMLDocument.fxml</file>
-            <file>file:/D:/Estudos%20DEV/ProjetoA3/src/projetoa3/ProjetoA3.java</file>
-            <file>file:/D:/Estudos%20DEV/ProjetoA3/src/projetoa3/styleTables.css</file>
+            <file>file:/C:/Users/Nycolas%20Garcia/Documents/NetBeansProjects/ProjetoA3/src/projetoa3/CSVReader.java</file>
+            <file>file:/C:/Users/Nycolas%20Garcia/Documents/NetBeansProjects/ProjetoA3/src/projetoa3/FXMLDocumentController.java</file>
+            <file>file:/C:/Users/Nycolas%20Garcia/Documents/NetBeansProjects/ProjetoA3/src/projetoa3/DatabaseConnection.java</file>
+            <file>file:/C:/Users/Nycolas%20Garcia/Documents/NetBeansProjects/ProjetoA3/src/projetoa3/Game.java</file>
         </group>
     </open-files>
 </project-private>
