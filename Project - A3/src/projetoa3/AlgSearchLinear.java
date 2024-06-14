@@ -40,13 +40,14 @@ public class AlgSearchLinear {
         tableView.setItems(resultData);
     }
 
-    private static ObservableList<Game> searchDatabase(String nome, Connection conn, int[] ciclos) {
+    private static ObservableList<Game> searchDatabase(String nome, Connection conn, int[] ciclos) 
+    {
         ObservableList<Game> resultData = FXCollections.observableArrayList();
         ciclos[0] = 0;
         try (Statement stmt = conn.createStatement();
-             ResultSet rs = stmt.executeQuery("SELECT * FROM games WHERE nome = '" + nome + "'")) {
-
-            while (rs.next()) {
+                ResultSet rs = stmt.executeQuery("SELECT * FROM games WHERE nome = '" + nome + "'")) {
+            while (rs.next()) 
+            {
                 ciclos[0]++;
                 Game game = new Game(
                         rs.getInt("id"),

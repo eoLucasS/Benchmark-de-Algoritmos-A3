@@ -53,7 +53,7 @@ public class FXMLDocumentController implements Initializable
     //declaração dos botões radiais para busca tg_b_linear e tg_b_binary, além de
     //declaração dos botões radiais para organização tb_o_bubble e tb_o_quick
     @FXML private RadioButton tg_b_linear;
-    @FXML private RadioButton tg_b_binaria;
+    @FXML private RadioButton tg_b_binary;
     @FXML private RadioButton tg_o_bubble;
     @FXML private RadioButton tg_o_quick;
     
@@ -135,23 +135,28 @@ public class FXMLDocumentController implements Initializable
     
     //Implementação das Funcionalidades de cada botão
     @FXML
-    private void handleBuscar(MouseEvent event) throws SQLException {
-        String nome = tf_buscar.getText();
-        if (tg_b_linear.isSelected()) {
-            AlgSearchLinear.searchAndUpdateUI(tb_alg_manual.getItems(), nome, tb_alg_manual, tf_ciclo_alg);
-            AlgSearchLinear.searchDatabaseAndUpdateUI(nome, tb_bd, tf_ciclo_bd, getConnection());
-        } else if (tg_b_binaria.isSelected()) {
-            // Implemente a busca binária
-        }
-    }
-
-    @FXML
     private void handleRecarregar(MouseEvent event) {
         loadCSVData();
         loadDataFromDatabase();
         tf_ciclo_alg.setText("");
         tf_ciclo_bd.setText("");
     }
+    
+    @FXML
+    private void handleBuscar(MouseEvent event) throws SQLException {
+        String nome = tf_buscar.getText();
+        if (tg_b_linear.isSelected()) {
+            AlgSearchLinear.searchAndUpdateUI(tb_alg_manual.getItems(), nome, tb_alg_manual, tf_ciclo_alg);
+            AlgSearchLinear.searchDatabaseAndUpdateUI(nome, tb_bd, tf_ciclo_bd, getConnection());
+        } else if (tg_b_binary.isSelected()) {
+            int[] ciclosAlg = new int[1];
+            AlgSortBubble.sort(tb_alg_manual.getItems(), 1, ciclosAlg); // Ordena por nome (assumindo que 1 é o índice para nome)
+            tf_ciclo_alg.setText(String.valueOf(ciclosAlg[0])); // Atualiza ciclos de ordenação
+            AlgSearchBinaria.searchAndUpdateUI(tb_alg_manual.getItems(), nome, tb_alg_manual, tf_ciclo_alg);
+            AlgSearchBinaria.searchDatabaseAndUpdateUI(nome, tb_bd, tf_ciclo_bd, getConnection());
+        }
+    }
+
 
     @FXML
     private void handleOrgId(MouseEvent event) throws SQLException {
@@ -200,6 +205,4 @@ public class FXMLDocumentController implements Initializable
             // Implemente a ordenação rápida aqui
         }
     }
-
-    
 }

@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="ProjetoA3.jar" size="18256" download="eager" />
+    <jar href="ProjetoA3.jar" size="17771" download="eager" />
     <jar href="lib\mysql-connector-j-8.4.0.jar" size="2533399" download="eager" />
   </resources>
   <jfx:javafx-desc  width="800" height="600" main-class="projetoa3.ProjetoA3"  name="ProjetoA3" />
