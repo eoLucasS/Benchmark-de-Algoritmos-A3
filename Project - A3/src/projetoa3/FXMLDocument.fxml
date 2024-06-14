@@ -37,14 +37,14 @@
                <toggleGroup>
                   <ToggleGroup fx:id="toogle_busca" />
                </toggleGroup></RadioButton>
-            <RadioButton fx:id="tg_b_binaria" mnemonicParsing="false" text="Busca Binária" toggleGroup="$toogle_busca" GridPane.rowIndex="3" />
+            <RadioButton fx:id="tg_b_binary" mnemonicParsing="false" text="Busca Binária" toggleGroup="$toogle_busca" GridPane.rowIndex="3" />
             
             
-            <RadioButton fx:id="tg_s_bubble" mnemonicParsing="false" selected="true" text="Bubble Sort" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <RadioButton fx:id="tg_o_bubble" mnemonicParsing="false" selected="true" text="Bubble Sort" GridPane.columnIndex="1" GridPane.rowIndex="2">
             <toggleGroup>
                   <ToggleGroup fx:id="toogle_ordem" />
                </toggleGroup></RadioButton>
-            <RadioButton fx:id="tg_s_quick" mnemonicParsing="false" text="Quick Sort" toggleGroup="$toogle_ordem" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <RadioButton fx:id="tg_o_quick" mnemonicParsing="false" text="Quick Sort" toggleGroup="$toogle_ordem" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <Label prefHeight="32.0" prefWidth="134.0" text="Algoritmos de Busca" />
             <Label prefHeight="32.0" prefWidth="210.0" text="Algoritmos de Ordenação" GridPane.columnIndex="1" />
             
@@ -57,8 +57,8 @@
          </font>
       </Label>
 
-      <TextField fx:id="tf_buscar" layoutX="106.0" layoutY="53.0" prefHeight="25.0" prefWidth="221.0" promptText="Buscar por Nome:" styleClass="search" />
-      <Button fx:id="btn_buscar" layoutX="167.0" layoutY="101.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="98.0" styleClass="btn-buscar" text="Buscar" />       
+      <TextField fx:id="tf_buscar" layoutX="102.0" layoutY="52.0" prefHeight="25.0" prefWidth="221.0" promptText="Buscar por Nome:" styleClass="search" />
+      <Button fx:id="btn_buscar" layoutX="102.0" layoutY="101.0" mnemonicParsing="false" onMouseClicked="#handleBuscar" prefHeight="38.0" prefWidth="222.0" styleClass="btn-buscar" text="Buscar" />       
             <TableView fx:id="tb_bd" layoutX="688.0" layoutY="269.0" prefHeight="452.0" prefWidth="424.0" AnchorPane.bottomAnchor="128.0" AnchorPane.leftAnchor="688.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="269.0">
               <columns>
                 <TableColumn fx:id="col_id_bd" editable="false" prefWidth="50.0" resizable="false" sortable="false" text="ID" />
@@ -92,6 +92,7 @@
                   <TableColumn fx:id="col_lan_alg" editable="false" prefWidth="124.0" resizable="false" sortable="false" text="LANÇAMENTO" />
               </columns>
             </TableView>
+<Button fx:id="btn_recarregar" layoutX="101.0" layoutY="149.0" mnemonicParsing="false" onMouseClicked="#handleRecarregar" prefHeight="38.0" prefWidth="222.0" styleClass="btn-buscar" text="Recarregar" />
       <styleClass>
          <String fx:value="bg-color" />
          <String fx:value="shadow" />
