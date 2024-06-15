@@ -10,20 +10,20 @@
 
 ## 📝 Descrição
 
-Projeto em Java para comparar a eficiência de busca e ordenação de jogos entre uma ArrayList e consultas SQL, analisando ciclos e tempo de execução.
+Projeto em Java para comparar a eficiência de busca e ordenação de jogos entre uma ArrayList e consultas SQL, analisando ciclos.
 
 ## 🔧 Funcionalidades
 
 - **Buscar Jogos**: Pesquisar um jogo específico pelo nome.
 - **Comparar Métodos**: Comparar a busca e ordenação entre uma ArrayList e o banco de dados.
-- **Visualização dos Resultados**: Exibir os resultados de ciclos e tempo de execução para cada método.
+- **Visualização dos Resultados**: Exibir os resultados de ciclos para cada método.
 
 ## 📊 Algoritmos de Busca e Ordenação
 
-- **BubbleSort**
-- **QuickSort**
-- **Busca Linear**
-- **Busca Binária**
+- **Bubble Sort**
+- **Quick Sort**
+- **Linear Search**
+- **Binary Search**
 
 ## 🛠 Documentação do Código
 
@@ -125,4 +125,4 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 -----
 
-  <h3 align="center"> Desenvolvido por <a href="https://www.linkedin.com/in/lucaslopesdasilva/">Lucas Lopes da Silva</a> ☕</h3>
+<h3 align="center"> Desenvolvido por <a href="https://www.linkedin.com/in/lucaslopesdasilva/">Lucas Lopes da Silva</a> ☕</h3>
