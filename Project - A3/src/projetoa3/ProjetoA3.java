@@ -11,26 +11,32 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 /**
- *
- * @author Danilo
+ * Classe principal do projeto, responsável por iniciar a aplicação JavaFX.
  */
 public class ProjetoA3 extends Application {
-    
+
+    /**
+     * Método start, chamado ao iniciar a aplicação.
+     *
+     * @param stage O palco principal da aplicação.
+     * @throws Exception Se ocorrer um erro ao carregar o arquivo FXML.
+     */
     @Override
     public void start(Stage stage) throws Exception {
+        // Carrega o arquivo FXML e define a cena da aplicação
         Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
-        
         Scene scene = new Scene(root);
         
         stage.setScene(scene);
-        stage.show();
+        stage.show();  // Exibe o palco
     }
 
     /**
-     * @param args the command line arguments
+     * Método principal da aplicação, que lança a aplicação JavaFX.
+     *
+     * @param args Os argumentos da linha de comando.
      */
     public static void main(String[] args) {
-        launch(args);
+        launch(args);  // Lança a aplicação JavaFX
     }
-    
 }

@@ -15,89 +15,117 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
+<!-- Raiz do layout, definindo o controlador FXML -->
 <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projetoa3.FXMLDocumentController">
 
-  
-      <AnchorPane prefHeight="849.0" prefWidth="1125.0" stylesheets="@styleTables.css">
-      <GridPane layoutX="365.0" layoutY="53.0" prefHeight="151.0" prefWidth="424.0" styleClass="grid-view">
-        <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints />
-            <RowConstraints />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        </rowConstraints>
-         <children>
-            
-            <RadioButton fx:id="tg_b_linear" mnemonicParsing="false" selected="true" text="Busca Linear" GridPane.rowIndex="2">
-               <toggleGroup>
-                  <ToggleGroup fx:id="toogle_busca" />
-               </toggleGroup></RadioButton>
-            <RadioButton fx:id="tg_b_binary" mnemonicParsing="false" text="Busca Binária" toggleGroup="$toogle_busca" GridPane.rowIndex="3" />
-            
-            
-            <RadioButton fx:id="tg_o_bubble" mnemonicParsing="false" selected="true" text="Bubble Sort" GridPane.columnIndex="1" GridPane.rowIndex="2">
-            <toggleGroup>
-                  <ToggleGroup fx:id="toogle_ordem" />
-               </toggleGroup></RadioButton>
-            <RadioButton fx:id="tg_o_quick" mnemonicParsing="false" text="Quick Sort" toggleGroup="$toogle_ordem" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <Label prefHeight="32.0" prefWidth="134.0" text="Algoritmos de Busca" />
-            <Label prefHeight="32.0" prefWidth="210.0" text="Algoritmos de Ordenação" GridPane.columnIndex="1" />
-            
-            
-         </children>
-      </GridPane>
-      <Label layoutX="693.0" layoutY="202.0" prefHeight="84.0" prefWidth="54.0" styleClass="label-info" text="BD">
-         <font>
-            <Font size="29.0" />
-         </font>
-      </Label>
+    <!-- AnchorPane principal -->
+    <AnchorPane prefHeight="849.0" prefWidth="1125.0" stylesheets="@styleTables.css">
 
-      <TextField fx:id="tf_buscar" layoutX="102.0" layoutY="52.0" prefHeight="25.0" prefWidth="221.0" promptText="Buscar por Nome:" styleClass="search" />
-      <Button fx:id="btn_buscar" layoutX="102.0" layoutY="101.0" mnemonicParsing="false" onMouseClicked="#handleBuscar" prefHeight="38.0" prefWidth="222.0" styleClass="btn-buscar" text="Buscar" />       
-            <TableView fx:id="tb_bd" layoutX="688.0" layoutY="269.0" prefHeight="452.0" prefWidth="424.0" AnchorPane.bottomAnchor="128.0" AnchorPane.leftAnchor="688.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="269.0">
-              <columns>
+        <!-- GridPane para seleção de algoritmos -->
+        <GridPane layoutX="365.0" layoutY="53.0" prefHeight="151.0" prefWidth="424.0" styleClass="grid-view">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <!-- RadioButton para busca linear -->
+                <RadioButton fx:id="tg_b_linear" mnemonicParsing="false" selected="true" text="Busca Linear" GridPane.rowIndex="2">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="toogle_busca" />
+                    </toggleGroup>
+                </RadioButton>
+
+                <!-- RadioButton para busca binária -->
+                <RadioButton fx:id="tg_b_binary" mnemonicParsing="false" text="Busca Binária" toggleGroup="$toogle_busca" GridPane.rowIndex="3" />
+
+                <!-- RadioButton para Bubble Sort -->
+                <RadioButton fx:id="tg_o_bubble" mnemonicParsing="false" selected="true" text="Bubble Sort" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="toogle_ordem" />
+                    </toggleGroup>
+                </RadioButton>
+
+                <!-- RadioButton para Quick Sort -->
+                <RadioButton fx:id="tg_o_quick" mnemonicParsing="false" text="Quick Sort" toggleGroup="$toogle_ordem" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                <!-- Labels de cabeçalho para os algoritmos -->
+                <Label prefHeight="32.0" prefWidth="134.0" text="Algoritmos de Busca" />
+                <Label prefHeight="32.0" prefWidth="210.0" text="Algoritmos de Ordenação" GridPane.columnIndex="1" />
+            </children>
+        </GridPane>
+
+        <!-- Label para identificação do banco de dados -->
+        <Label layoutX="693.0" layoutY="202.0" prefHeight="84.0" prefWidth="54.0" styleClass="label-info" text="BD">
+            <font>
+                <Font size="29.0" />
+            </font>
+        </Label>
+
+        <!-- Campo de texto para busca -->
+        <TextField fx:id="tf_buscar" layoutX="102.0" layoutY="52.0" prefHeight="25.0" prefWidth="221.0" promptText="Buscar por Nome:" styleClass="search" />
+
+        <!-- Botão para acionar a busca -->
+        <Button fx:id="btn_buscar" layoutX="102.0" layoutY="101.0" mnemonicParsing="false" onMouseClicked="#handleBuscar" prefHeight="38.0" prefWidth="222.0" styleClass="btn-buscar" text="Buscar" />
+
+        <!-- Tabela para exibição de dados do banco de dados -->
+        <TableView fx:id="tb_bd" layoutX="688.0" layoutY="269.0" prefHeight="452.0" prefWidth="424.0" AnchorPane.bottomAnchor="128.0" AnchorPane.leftAnchor="688.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="269.0">
+            <columns>
                 <TableColumn fx:id="col_id_bd" editable="false" prefWidth="50.0" resizable="false" sortable="false" text="ID" />
                 <TableColumn fx:id="col_nome_bd" editable="false" prefWidth="123.0" resizable="false" sortable="false" text="NOME" />
-                  <TableColumn fx:id="col_cat_bd" editable="false" prefWidth="123.0" resizable="false" sortable="false" text="CATEGORIA" />
-                  <TableColumn fx:id="col_lan_bd" editable="false" prefWidth="123.0" resizable="false" sortable="false" text="LANÇAMENTO" />
-              </columns>
-            </TableView>
-      <Label layoutX="34.0" layoutY="731.0" prefHeight="32.0" prefWidth="110.0" text="Tempo de Execução:" />
-      <Label layoutX="105.0" layoutY="765.0" prefHeight="32.0" prefWidth="40.0" text="Ciclos:" />
-      <Label layoutX="698.0" layoutY="731.0" prefHeight="32.0" prefWidth="110.0" text="Tempo de Execução:" />
-      <Label layoutX="769.0" layoutY="763.0" prefHeight="32.0" prefWidth="40.0" text="Ciclos:" />
-      <TextField fx:id="tf_temp_alg" editable="false" layoutX="153.0" layoutY="735.0" styleClass="textfield" />
-      <TextField fx:id="tf_ciclo_alg" editable="false" layoutX="153.0" layoutY="767.0" styleClass="textfield" />
-      <TextField fx:id="tf_temp_bd" editable="false" layoutX="822.0" layoutY="735.0" styleClass="textfield" />
-      <TextField fx:id="tf_ciclo_bd" editable="false" layoutX="822.0" layoutY="767.0" styleClass="textfield" />
-      <Button fx:id="btn_sort_id" layoutX="837.0" layoutY="50.0" minHeight="18.0" mnemonicParsing="false" onMouseClicked="#handleOrgId" prefHeight="38.0" prefWidth="234.0" styleClass="btn-buscar" text="Organizar por ID" />
-      <Button fx:id="btn_sort_nome" layoutX="837.0" layoutY="101.0" mnemonicParsing="false" onMouseClicked="#handleOrgNome" prefHeight="38.0" prefWidth="234.0" styleClass="btn-buscar" text="Organizar por Nome" />
-      <Button fx:id="btn_sort_cat" layoutX="837.0" layoutY="149.0" mnemonicParsing="false" onMouseClicked="#handleOrgCat" prefHeight="38.0" prefWidth="234.0" styleClass="btn-buscar" text="Organizar por Categoria" />
-      <Button fx:id="btn_sort_lan" layoutX="837.0" layoutY="202.0" mnemonicParsing="false" onMouseClicked="#handleOrgLan" prefHeight="38.0" prefWidth="234.0" styleClass="btn-buscar" text="Organizar por Lançamento" />
-      <Label layoutX="19.0" layoutY="204.0" prefHeight="84.0" prefWidth="212.0" styleClass="label-info" text="Array">
-         <font>
-            <Font size="29.0" />
-         </font>
-      </Label>    
-            <TableView fx:id="tb_alg_manual" layoutX="14.0" layoutY="269.0" prefHeight="452.0" prefWidth="424.0" AnchorPane.bottomAnchor="128.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="688.0" AnchorPane.topAnchor="269.0">
-              <columns>
+                <TableColumn fx:id="col_cat_bd" editable="false" prefWidth="123.0" resizable="false" sortable="false" text="CATEGORIA" />
+                <TableColumn fx:id="col_lan_bd" editable="false" prefWidth="123.0" resizable="false" sortable="false" text="LANÇAMENTO" />
+            </columns>
+        </TableView>
+
+        <!-- Labels e campos de texto para exibição de tempo de execução e ciclos para algoritmos -->
+        <Label layoutX="34.0" layoutY="731.0" prefHeight="32.0" prefWidth="110.0" text="Tempo de Execução:" />
+        <Label layoutX="105.0" layoutY="765.0" prefHeight="32.0" prefWidth="40.0" text="Ciclos:" />
+        <Label layoutX="698.0" layoutY="731.0" prefHeight="32.0" prefWidth="110.0" text="Tempo de Execução:" />
+        <Label layoutX="769.0" layoutY="763.0" prefHeight="32.0" prefWidth="40.0" text="Ciclos:" />
+        <TextField fx:id="tf_temp_alg" editable="false" layoutX="153.0" layoutY="735.0" styleClass="textfield" />
+        <TextField fx:id="tf_ciclo_alg" editable="false" layoutX="153.0" layoutY="767.0" styleClass="textfield" />
+        <TextField fx:id="tf_temp_bd" editable="false" layoutX="822.0" layoutY="735.0" styleClass="textfield" />
+        <TextField fx:id="tf_ciclo_bd" editable="false" layoutX="822.0" layoutY="767.0" styleClass="textfield" />
+
+        <!-- Botões para organizar dados -->
+        <Button fx:id="btn_sort_id" layoutX="837.0" layoutY="50.0" minHeight="18.0" mnemonicParsing="false" onMouseClicked="#handleOrgId" prefHeight="38.0" prefWidth="234.0" styleClass="btn-buscar" text="Organizar por ID" />
+        <Button fx:id="btn_sort_nome" layoutX="837.0" layoutY="101.0" mnemonicParsing="false" onMouseClicked="#handleOrgNome" prefHeight="38.0" prefWidth="234.0" styleClass="btn-buscar" text="Organizar por Nome" />
+        <Button fx:id="btn_sort_cat" layoutX="837.0" layoutY="149.0" mnemonicParsing="false" onMouseClicked="#handleOrgCat" prefHeight="38.0" prefWidth="234.0" styleClass="btn-buscar" text="Organizar por Categoria" />
+        <Button fx:id="btn_sort_lan" layoutX="837.0" layoutY="202.0" mnemonicParsing="false" onMouseClicked="#handleOrgLan" prefHeight="38.0" prefWidth="234.0" styleClass="btn-buscar" text="Organizar por Lançamento" />
+
+        <!-- Label para identificação da ArrayList -->
+        <Label layoutX="19.0" layoutY="204.0" prefHeight="84.0" prefWidth="212.0" styleClass="label-info" text="Array">
+            <font>
+                <Font size="29.0" />
+            </font>
+        </Label>
+
+        <!-- Tabela para exibição de dados do ArrayList -->
+        <TableView fx:id="tb_alg_manual" layoutX="14.0" layoutY="269.0" prefHeight="452.0" prefWidth="424.0" AnchorPane.bottomAnchor="128.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="688.0" AnchorPane.topAnchor="269.0">
+            <columns>
                 <TableColumn fx:id="col_id_alg" editable="false" prefWidth="50.0" resizable="false" sortable="false" text="ID" />
                 <TableColumn fx:id="col_nome_alg" editable="false" prefWidth="124.0" resizable="false" sortable="false" text="NOME" />
-                  <TableColumn fx:id="col_cat_alg" editable="false" prefWidth="124.0" resizable="false" sortable="false" text="CATEGORIA" />
-                  <TableColumn fx:id="col_lan_alg" editable="false" prefWidth="124.0" resizable="false" sortable="false" text="LANÇAMENTO" />
-              </columns>
-            </TableView>
-<Button fx:id="btn_recarregar" layoutX="101.0" layoutY="149.0" mnemonicParsing="false" onMouseClicked="#handleRecarregar" prefHeight="38.0" prefWidth="222.0" styleClass="btn-buscar" text="Recarregar" />
-      <styleClass>
-         <String fx:value="bg-color" />
-         <String fx:value="shadow" />
-      </styleClass>
-      
-      </AnchorPane>
- 
+                <TableColumn fx:id="col_cat_alg" editable="false" prefWidth="124.0" resizable="false" sortable="false" text="CATEGORIA" />
+                <TableColumn fx:id="col_lan_alg" editable="false" prefWidth="124.0" resizable="false" sortable="false" text="LANÇAMENTO" />
+            </columns>
+        </TableView>
+
+        <!-- Botão para recarregar dados -->
+        <Button fx:id="btn_recarregar" layoutX="101.0" layoutY="149.0" mnemonicParsing="false" onMouseClicked="#handleRecarregar" prefHeight="38.0" prefWidth="222.0" styleClass="btn-buscar" text="Recarregar" />
+
+        <!-- Estilo adicional para o AnchorPane -->
+        <styleClass>
+            <String fx:value="bg-color" />
+            <String fx:value="shadow" />
+        </styleClass>
+        
+    </AnchorPane>
+
 </StackPane>

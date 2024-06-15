@@ -1,6 +1,6 @@
 package projetoa3;
 
-//importação de bibliotecas necessárias
+// Importação de bibliotecas necessárias
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -25,70 +25,86 @@ import javafx.scene.control.ToggleGroup;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 
-public class FXMLDocumentController implements Initializable 
-{
-    //declaração de variáveis do front end
-    
-    //declaração da tabela tb_db
+/**
+ * Controlador para o documento FXML.
+ */
+public class FXMLDocumentController implements Initializable {
+
+    // Declaração de variáveis do front end
+
+    // Declaração da tabela tb_bd
     @FXML private TableView<Game> tb_bd;
     @FXML private TableColumn<Game, Integer> col_id_bd;
     @FXML private TableColumn<Game, String> col_nome_bd;
     @FXML private TableColumn<Game, String> col_cat_bd;
     @FXML private TableColumn<Game, Integer> col_lan_bd;
-    
-    //declaração da tabela tb_alg_manual
+
+    // Declaração da tabela tb_alg_manual
     @FXML private TableView<Game> tb_alg_manual;
     @FXML private TableColumn<Game, Integer> col_id_alg;
     @FXML private TableColumn<Game, String> col_nome_alg;
     @FXML private TableColumn<Game, String> col_cat_alg;
     @FXML private TableColumn<Game, Integer> col_lan_alg;
-    
-    //declaração dos campos de texto para tf_buscar, tf_ciclos_alg/bd e tf_temp_alg/bd
+
+    // Declaração dos campos de texto para tf_buscar, tf_ciclos_alg/bd e tf_temp_alg/bd
     @FXML private TextField tf_buscar;
     @FXML private TextField tf_ciclo_alg;
     @FXML private TextField tf_ciclo_bd;
     @FXML private TextField tf_temp_alg;
     @FXML private TextField tf_temp_bd;
-    
-    //declaração dos botões radiais para busca tg_b_linear e tg_b_binary, além de
-    //declaração dos botões radiais para organização tb_o_bubble e tb_o_quick
+
+    // Declaração dos botões radiais para busca tg_b_linear e tg_b_binary
+    // Declaração dos botões radiais para organização tb_o_bubble e tb_o_quick
     @FXML private RadioButton tg_b_linear;
     @FXML private RadioButton tg_b_binary;
     @FXML private RadioButton tg_o_bubble;
     @FXML private RadioButton tg_o_quick;
-    
-    //declaração do Objeto 
+
+    // Declaração do Objeto ObservableList para armazenar os dados dos jogos
     @FXML private ObservableList<Game> gameData;
-    
-    
+
+    /**
+     * Método inicializador chamado após o carregamento do FXML.
+     *
+     * @param url URL para localizar o recurso.
+     * @param rb  Bundle de recursos.
+     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        //Inicializa a Tabela tb_bd
+        // Inicializa a Tabela tb_bd
         col_id_bd.setCellValueFactory(new PropertyValueFactory<>("id"));
         col_nome_bd.setCellValueFactory(new PropertyValueFactory<>("nome"));
         col_cat_bd.setCellValueFactory(new PropertyValueFactory<>("categoria"));
         col_lan_bd.setCellValueFactory(new PropertyValueFactory<>("lancamento"));
-        
-        //Inicializa a Tabela tb_alg_manual
+
+        // Inicializa a Tabela tb_alg_manual
         col_id_alg.setCellValueFactory(new PropertyValueFactory<>("id"));
         col_nome_alg.setCellValueFactory(new PropertyValueFactory<>("nome"));
         col_cat_alg.setCellValueFactory(new PropertyValueFactory<>("categoria"));
         col_lan_alg.setCellValueFactory(new PropertyValueFactory<>("lancamento"));
-        
-        //declaração dos métodos que devem ser executados nas suas respectivas tabelas
+
+        // Chama os métodos que carregam os dados nas respectivas tabelas
         loadDataFromDatabase();
         loadCSVData();
     }
-    
-    //Método que Lê o arquivo games.csv
+
+    /**
+     * Método que lê o arquivo games.csv.
+     */
     private void loadCSVData() {
         ObservableList<Game> csvGameData = FXCollections.observableArrayList();
-        List<Game> csvGames = readGamesFromCSV("C:\\Users\\Nycolas Garcia\\Documents\\NetBeansProjects\\ProjetoA3\\src\\data\\games.csv");
+        String path = "./src/data/games.csv";
+        List<Game> csvGames = readGamesFromCSV(path);
         csvGameData.addAll(csvGames);
         tb_alg_manual.setItems(csvGameData);
     }
-    
-    //Método que insere os dados do arquivo games.csv na tabela tb_alg_manual
+
+    /**
+     * Método que insere os dados do arquivo games.csv na tabela tb_alg_manual.
+     *
+     * @param filePath Caminho do arquivo CSV.
+     * @return Lista de jogos carregados do arquivo CSV.
+     */
     private List<Game> readGamesFromCSV(String filePath) {
         List<Game> games = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
@@ -104,15 +120,22 @@ public class FXMLDocumentController implements Initializable
         return games;
     }
 
-    //Método que realiza a conexão SQL
+    /**
+     * Método que realiza a conexão SQL.
+     *
+     * @return Conexão com o banco de dados.
+     * @throws SQLException Se ocorrer um erro ao conectar.
+     */
     private Connection getConnection() throws SQLException {
         String url = "jdbc:mysql://localhost:3306/games_db";
         String user = "root";
         String password = "";
         return DriverManager.getConnection(url, user, password);
     }
-    
-    //Método que insere os dados do banco de dados na tabela tb_bd
+
+    /**
+     * Método que insere os dados do banco de dados na tabela tb_bd.
+     */
     private void loadDataFromDatabase() {
         gameData = FXCollections.observableArrayList();
         try (Connection conn = getConnection();
@@ -132,8 +155,12 @@ public class FXMLDocumentController implements Initializable
             e.printStackTrace();
         }
     }
-    
-    //Implementação das Funcionalidades de cada botão
+
+    /**
+     * Implementação das funcionalidades de cada botão.
+     *
+     * @param event Evento de clique do mouse.
+     */
     @FXML
     private void handleRecarregar(MouseEvent event) {
         loadCSVData();
@@ -141,7 +168,13 @@ public class FXMLDocumentController implements Initializable
         tf_ciclo_alg.setText("");
         tf_ciclo_bd.setText("");
     }
-    
+
+    /**
+     * Método de busca e atualização das tabelas com base no nome do jogo.
+     *
+     * @param event Evento de clique do mouse.
+     * @throws SQLException Se ocorrer um erro na consulta SQL.
+     */
     @FXML
     private void handleBuscar(MouseEvent event) throws SQLException {
         String nome = tf_buscar.getText();
@@ -150,59 +183,86 @@ public class FXMLDocumentController implements Initializable
             AlgSearchLinear.searchDatabaseAndUpdateUI(nome, tb_bd, tf_ciclo_bd, getConnection());
         } else if (tg_b_binary.isSelected()) {
             int[] ciclosAlg = new int[1];
-            AlgSortBubble.sort(tb_alg_manual.getItems(), 1, ciclosAlg); // Ordena por nome (assumindo que 1 é o índice para nome)
-            tf_ciclo_alg.setText(String.valueOf(ciclosAlg[0])); // Atualiza ciclos de ordenação
+            AlgSortBubble.sort(tb_alg_manual.getItems(), 1, ciclosAlg);
+            tf_ciclo_alg.setText(String.valueOf(ciclosAlg[0]));
             AlgSearchBinaria.searchAndUpdateUI(tb_alg_manual.getItems(), nome, tb_alg_manual, tf_ciclo_alg);
             AlgSearchBinaria.searchDatabaseAndUpdateUI(nome, tb_bd, tf_ciclo_bd, getConnection());
         }
     }
 
-
+    /**
+     * Método para ordenar a tabela por ID.
+     *
+     * @param event Evento de clique do mouse.
+     * @throws SQLException Se ocorrer um erro na consulta SQL.
+     */
     @FXML
     private void handleOrgId(MouseEvent event) throws SQLException {
         int[] ciclosAlg = new int[1];
         if (tg_o_bubble.isSelected()) {
-            AlgSortBubble.sort(tb_alg_manual.getItems(), 0, ciclosAlg);  // Ordenação da tabela em memória
-            tf_ciclo_alg.setText(String.valueOf(ciclosAlg[0])); // Atualiza a contagem de ciclos para a ordenação manual
+            AlgSortBubble.sort(tb_alg_manual.getItems(), 0, ciclosAlg);
+            tf_ciclo_alg.setText(String.valueOf(ciclosAlg[0]));
             AlgSortBubble.sortDatabaseAndUpdateUI("id", tb_bd, tf_ciclo_bd, getConnection());
         } else if (tg_o_quick.isSelected()) {
-            // Implemente a ordenação rápida aqui
+            AlgSortQuick.sort(tb_alg_manual.getItems(), 0, ciclosAlg, tb_alg_manual, tf_ciclo_alg);
+            AlgSortBubble.sortDatabaseAndUpdateUI("id", tb_bd, tf_ciclo_bd, getConnection());
         }
     }
 
+    /**
+     * Método para ordenar a tabela por Nome.
+     *
+     * @param event Evento de clique do mouse.
+     * @throws SQLException Se ocorrer um erro na consulta SQL.
+     */
     @FXML
     private void handleOrgNome(MouseEvent event) throws SQLException {
         int[] ciclosAlg = new int[1];
         if (tg_o_bubble.isSelected()) {
-            AlgSortBubble.sort(tb_alg_manual.getItems(), 1, ciclosAlg);  // Ordenação da tabela em memória
+            AlgSortBubble.sort(tb_alg_manual.getItems(), 1, ciclosAlg);
             tf_ciclo_alg.setText(String.valueOf(ciclosAlg[0]));
             AlgSortBubble.sortDatabaseAndUpdateUI("nome", tb_bd, tf_ciclo_bd, getConnection());
         } else if (tg_o_quick.isSelected()) {
-            // Implemente a ordenação rápida aqui
+            AlgSortQuick.sort(tb_alg_manual.getItems(), 1, ciclosAlg, tb_alg_manual, tf_ciclo_alg);
+            AlgSortBubble.sortDatabaseAndUpdateUI("nome", tb_bd, tf_ciclo_bd, getConnection());
         }
     }
 
+    /**
+     * Método para ordenar a tabela por Categoria.
+     *
+     * @param event Evento de clique do mouse.
+     * @throws SQLException Se ocorrer um erro na consulta SQL.
+     */
     @FXML
     private void handleOrgCat(MouseEvent event) throws SQLException {
         int[] ciclosAlg = new int[1];
         if (tg_o_bubble.isSelected()) {
-            AlgSortBubble.sort(tb_alg_manual.getItems(), 2, ciclosAlg);  // Ordenação da tabela em memória
+            AlgSortBubble.sort(tb_alg_manual.getItems(), 2, ciclosAlg);
             tf_ciclo_alg.setText(String.valueOf(ciclosAlg[0]));
             AlgSortBubble.sortDatabaseAndUpdateUI("categoria", tb_bd, tf_ciclo_bd, getConnection());
         } else if (tg_o_quick.isSelected()) {
-            // Implemente a ordenação rápida aqui
+            AlgSortQuick.sort(tb_alg_manual.getItems(), 2, ciclosAlg, tb_alg_manual, tf_ciclo_alg);
+            AlgSortBubble.sortDatabaseAndUpdateUI("categoria", tb_bd, tf_ciclo_bd, getConnection());
         }
     }
 
+    /**
+     * Método para ordenar a tabela por Lançamento.
+     *
+     * @param event Evento de clique do mouse.
+     * @throws SQLException Se ocorrer um erro na consulta SQL.
+     */
     @FXML
     private void handleOrgLan(MouseEvent event) throws SQLException {
         int[] ciclosAlg = new int[1];
         if (tg_o_bubble.isSelected()) {
-            AlgSortBubble.sort(tb_alg_manual.getItems(), 3, ciclosAlg);  // Ordenação da tabela em memória
+            AlgSortBubble.sort(tb_alg_manual.getItems(), 3, ciclosAlg);
             tf_ciclo_alg.setText(String.valueOf(ciclosAlg[0]));
             AlgSortBubble.sortDatabaseAndUpdateUI("lancamento", tb_bd, tf_ciclo_bd, getConnection());
         } else if (tg_o_quick.isSelected()) {
-            // Implemente a ordenação rápida aqui
+            AlgSortQuick.sort(tb_alg_manual.getItems(), 3, ciclosAlg, tb_alg_manual, tf_ciclo_alg);
+            AlgSortBubble.sortDatabaseAndUpdateUI("lancamento", tb_bd, tf_ciclo_bd, getConnection());
         }
     }
 }
