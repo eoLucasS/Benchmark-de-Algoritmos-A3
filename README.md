@@ -45,8 +45,9 @@ Toda a documentação do código está presente nos comentários em JavaDoc dent
 
 ## 📝 Pré-Requisitos 
 
-- Documentação do Projeto: <a href="https://docs.google.com/document/d/1EkjZfIXw7DkM1SmsCqEMJaP_j0WdlnnCPhT-NaauLJs" target="_blank"> Clique aqui </a>
+- Documentação do Projeto: <a href="https://docs.google.com/document/d/1yQKc22IEB7giy-7p7YFWQ4cH8sxCx3jOVY9yD0VcSVg/edit?usp=sharing" target="_blank"> Clique aqui </a>
 - Pré-Requisitos: <a href="https://mediacdns3.ulife.com.br/PAT/Upload/3681712/EDAAA3EspecificaodoProjeto_20240415180358.pdf" target="_blank"> Clique aqui </a>  
+- PowerPoint: <a href="https://docs.google.com/presentation/d/1cJ4jwU6Af-JJjkmCRTEW3eIh2bq3Q88mn4mYj5nMqqg/edit?usp=sharing" target="_blank"> Clique aqui </a>  
 
 ## 🚀 Tecnologias Utilizadas
 
@@ -65,7 +66,7 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 - [DataBase Utilizada](https://cdn.discordapp.com/attachments/1197660245556732095/1251688815114977332/games_db.sql?ex=666f7d8c&is=666e2c0c&hm=645e0aba16251717bef22ad6ef1fa84dcac52f6fbf28303a01803a90601cb8ac&)
 - [Scene Builder](https://download2.gluonhq.com/scenebuilder/21.0.0/install/win/SceneBuilder-21.0.0.msi)
 - [Apache NetBeans IDE 16](https://archive.apache.org/dist/netbeans/netbeans-installers/16/Apache-NetBeans-16-bin-windows-x64.exe)
-- [XAMPP](https://ufpr.dl.sourceforge.net/project/xampp/XAMPP%20Windows/8.2.12/xampp-windows-x64-8.2.12-0-VS16-installer.exe)
+- [XAMPP](http://sourceforge.net/projects/xampp/files/)
 
 ## 🔗 Links
 

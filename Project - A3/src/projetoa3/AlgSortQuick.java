@@ -1,12 +1,18 @@
 package projetoa3;
 
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.application.Platform;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
 /**
- * Classe responsável pela ordenação usando Quick Sort para atualizar a interface do usuário.
+ * Classe responsável pela ordenação usando Quick Sort e pela interação com o banco de dados para atualizar a interface do usuário.
  */
 public class AlgSortQuick {
 
@@ -91,5 +97,54 @@ public class AlgSortQuick {
             case 3: return a.getLancamento() < b.getLancamento();
             default: return false;
         }
+    }
+
+    /**
+     * Realiza a ordenação no banco de dados e atualiza a interface do usuário.
+     *
+     * @param orderBy        O campo pelo qual a ordenação será feita.
+     * @param tableView      A tabela a ser atualizada com o resultado da ordenação.
+     * @param cycleTextField Campo de texto para exibir o número de ciclos da ordenação.
+     * @param conn           A conexão com o banco de dados.
+     */
+    public static void sortDatabaseAndUpdateUI(String orderBy, TableView<Game> tableView, TextField cycleTextField, Connection conn) {
+        int[] ciclosSQL = new int[1];
+        ObservableList<Game> resultData = sortDatabase(orderBy, conn, ciclosSQL);
+        Platform.runLater(() -> {
+            cycleTextField.setText(String.valueOf(ciclosSQL[0]));
+            tableView.setItems(resultData);
+            tableView.refresh();
+        });
+    }
+
+    /**
+     * Realiza uma ordenação no banco de dados.
+     *
+     * @param sortBy O campo pelo qual a ordenação será feita.
+     * @param conn   A conexão com o banco de dados.
+     * @param ciclos Array para armazenar o número de ciclos da ordenação.
+     * @return Uma lista observável de jogos ordenados.
+     */
+    private static ObservableList<Game> sortDatabase(String sortBy, Connection conn, int[] ciclos) {
+        ObservableList<Game> resultData = FXCollections.observableArrayList();
+        String query = String.format("SELECT * FROM games ORDER BY %s", sortBy);
+        try (Statement stmt = conn.createStatement();
+             ResultSet rs = stmt.executeQuery(query)) {
+
+            while (rs.next()) {
+                ciclos[0]++;
+                // Cria um novo objeto Game para cada registro encontrado
+                Game game = new Game(
+                        rs.getInt("id"),
+                        rs.getString("nome"),
+                        rs.getString("categoria"),
+                        rs.getInt("lancamento")
+                );
+                resultData.add(game);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return resultData;
     }
 }
