@@ -55,6 +55,7 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 - [Java JDK 8](https://www.oracle.com/br/java/technologies/javase/javase8-archive-downloads.html)
 - [JavaFX Version 22.0.1](https://download2.gluonhq.com/openjfx/22.0.1/openjfx-22.0.1_windows-x64_bin-sdk.zip)
+- [Mysql-Connector-j-8.4.0](https://cdn.discordapp.com/attachments/1197660245556732095/1251681287312379955/mysql-connector-j-8.4.0.rar?ex=666f768a&is=666e250a&hm=371dfcb0553d9bc638a1ad79189f46b03b6da60b1c38d6c845950ce64fd5bf27&)
 - [Scene Builder](https://download2.gluonhq.com/scenebuilder/21.0.0/install/win/SceneBuilder-21.0.0.msi)
 - [Apache NetBeans IDE 16](https://archive.apache.org/dist/netbeans/netbeans-installers/16/Apache-NetBeans-16-bin-windows-x64.exe)
 - [XAMPP](https://ufpr.dl.sourceforge.net/project/xampp/XAMPP%20Windows/8.2.12/xampp-windows-x64-8.2.12-0-VS16-installer.exe)

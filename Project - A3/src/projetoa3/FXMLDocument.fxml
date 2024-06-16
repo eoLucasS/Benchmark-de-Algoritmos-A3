@@ -16,6 +16,7 @@
 <?import javafx.scene.text.Font?>
 
 <!-- Raiz do layout, definindo o controlador FXML -->
+
 <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projetoa3.FXMLDocumentController">
 
     <!-- AnchorPane principal -->
@@ -72,7 +73,7 @@
         <TextField fx:id="tf_buscar" layoutX="102.0" layoutY="52.0" prefHeight="25.0" prefWidth="221.0" promptText="Buscar por Nome:" styleClass="search" />
 
         <!-- Botão para acionar a busca -->
-        <Button fx:id="btn_buscar" layoutX="102.0" layoutY="101.0" mnemonicParsing="false" onMouseClicked="#handleBuscar" prefHeight="38.0" prefWidth="222.0" styleClass="btn-buscar" text="Buscar" />
+        <Button fx:id="btn_buscar" layoutX="102.0" layoutY="96.0" mnemonicParsing="false" onMouseClicked="#handleBuscar" prefHeight="38.0" prefWidth="222.0" styleClass="btn-buscar" text="Buscar" />
 
         <!-- Tabela para exibição de dados do banco de dados -->
         <TableView fx:id="tb_bd" layoutX="688.0" layoutY="269.0" prefHeight="452.0" prefWidth="424.0" AnchorPane.bottomAnchor="128.0" AnchorPane.leftAnchor="688.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="269.0">
@@ -83,22 +84,16 @@
                 <TableColumn fx:id="col_lan_bd" editable="false" prefWidth="123.0" resizable="false" sortable="false" text="LANÇAMENTO" />
             </columns>
         </TableView>
-
-        <!-- Labels e campos de texto para exibição de tempo de execução e ciclos para algoritmos -->
-        <Label layoutX="34.0" layoutY="731.0" prefHeight="32.0" prefWidth="110.0" text="Tempo de Execução:" />
-        <Label layoutX="105.0" layoutY="765.0" prefHeight="32.0" prefWidth="40.0" text="Ciclos:" />
-        <Label layoutX="698.0" layoutY="731.0" prefHeight="32.0" prefWidth="110.0" text="Tempo de Execução:" />
-        <Label layoutX="769.0" layoutY="763.0" prefHeight="32.0" prefWidth="40.0" text="Ciclos:" />
-        <TextField fx:id="tf_temp_alg" editable="false" layoutX="153.0" layoutY="735.0" styleClass="textfield" />
-        <TextField fx:id="tf_ciclo_alg" editable="false" layoutX="153.0" layoutY="767.0" styleClass="textfield" />
-        <TextField fx:id="tf_temp_bd" editable="false" layoutX="822.0" layoutY="735.0" styleClass="textfield" />
-        <TextField fx:id="tf_ciclo_bd" editable="false" layoutX="822.0" layoutY="767.0" styleClass="textfield" />
+        <Label layoutX="105.0" layoutY="765.0" prefHeight="32.0" prefWidth="54.0" text="Ciclos:" />
+        <Label layoutX="769.0" layoutY="763.0" prefHeight="32.0" prefWidth="54.0" text="Ciclos:" />
+        <TextField fx:id="tf_ciclo_alg" editable="false" layoutX="159.0" layoutY="767.0" styleClass="textfield" />
+        <TextField fx:id="tf_ciclo_bd" editable="false" layoutX="828.0" layoutY="767.0" styleClass="textfield" />
 
         <!-- Botões para organizar dados -->
-        <Button fx:id="btn_sort_id" layoutX="837.0" layoutY="50.0" minHeight="18.0" mnemonicParsing="false" onMouseClicked="#handleOrgId" prefHeight="38.0" prefWidth="234.0" styleClass="btn-buscar" text="Organizar por ID" />
-        <Button fx:id="btn_sort_nome" layoutX="837.0" layoutY="101.0" mnemonicParsing="false" onMouseClicked="#handleOrgNome" prefHeight="38.0" prefWidth="234.0" styleClass="btn-buscar" text="Organizar por Nome" />
-        <Button fx:id="btn_sort_cat" layoutX="837.0" layoutY="149.0" mnemonicParsing="false" onMouseClicked="#handleOrgCat" prefHeight="38.0" prefWidth="234.0" styleClass="btn-buscar" text="Organizar por Categoria" />
-        <Button fx:id="btn_sort_lan" layoutX="837.0" layoutY="202.0" mnemonicParsing="false" onMouseClicked="#handleOrgLan" prefHeight="38.0" prefWidth="234.0" styleClass="btn-buscar" text="Organizar por Lançamento" />
+        <Button fx:id="btn_sort_id" layoutX="837.0" layoutY="53.0" minHeight="18.0" mnemonicParsing="false" onMouseClicked="#handleOrgId" prefHeight="38.0" prefWidth="234.0" styleClass="btn-buscar" text="Organizar por ID" />
+        <Button fx:id="btn_sort_nome" layoutX="837.0" layoutY="103.0" mnemonicParsing="false" onMouseClicked="#handleOrgNome" prefHeight="38.0" prefWidth="234.0" styleClass="btn-buscar" text="Organizar por Nome" />
+        <Button fx:id="btn_sort_cat" layoutX="837.0" layoutY="152.0" mnemonicParsing="false" onMouseClicked="#handleOrgCat" prefHeight="38.0" prefWidth="234.0" styleClass="btn-buscar" text="Organizar por Categoria" />
+        <Button fx:id="btn_sort_lan" layoutX="837.0" layoutY="201.0" mnemonicParsing="false" onMouseClicked="#handleOrgLan" prefHeight="38.0" prefWidth="234.0" styleClass="btn-buscar" text="Organizar por Lançamento" />
 
         <!-- Label para identificação da ArrayList -->
         <Label layoutX="19.0" layoutY="204.0" prefHeight="84.0" prefWidth="212.0" styleClass="label-info" text="Array">
@@ -118,7 +113,7 @@
         </TableView>
 
         <!-- Botão para recarregar dados -->
-        <Button fx:id="btn_recarregar" layoutX="101.0" layoutY="149.0" mnemonicParsing="false" onMouseClicked="#handleRecarregar" prefHeight="38.0" prefWidth="222.0" styleClass="btn-buscar" text="Recarregar" />
+        <Button fx:id="btn_recarregar" layoutX="101.0" layoutY="145.0" mnemonicParsing="false" onMouseClicked="#handleRecarregar" prefHeight="38.0" prefWidth="222.0" styleClass="btn-buscar" text="Recarregar" />
 
         <!-- Estilo adicional para o AnchorPane -->
         <styleClass>

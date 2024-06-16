@@ -1,97 +1,103 @@
 /*
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
-*/
-/* 
-    Created on : 12/05/2024, 16:26:16
-    Author     : Danilo
-*/
+ * CascadeStyleSheet.css
+ * Folha de estilo CSS para estilizar elementos da interface gráfica.
+ * Criado em: 12/05/2024, 16:26:16
+ */
 
-.shadow{
-    -fx-effect:dropshadow(three-pass-box, rgba(0,0,0,0.4), 6,0,0,0);
+/* Estilo para sombra */
+.shadow {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 6, 0, 0, 0);
 }
 
-.bg-color{
-    /*-fx-background-color:linear-gradient(to left , #59FFE7, #59FFAF);*/
+/* Estilo para cor de fundo */
+.bg-color {
     -fx-background-color: linear-gradient(to bottom, #C1E1FF, #AED6F1);
-    
-    -fx-background-radius:8px;
+    -fx-background-radius: 8px;
 }
 
-.search{
-    -fx-background-color:transparent;
-    -fx-border-color:linear-gradient(to bottom right, #2d658c, #2ca772);
-    -fx-border-width:1.5px;
-    -fx-border-radius:8px;
-    -fx-font-family:"Tahoma";
-    -fx-font-size:16px;
-    -fx-alignment: CENTER;
-}
-
-.search:focused{
-    -fx-border-width:1.6px;
-    -fx-border-color:black;
-}
-
-.grid-view{
-    -fx-padding:1px;
-    -fx-border-color:linear-gradient(to bottom right, #2d658c, #2ca772);
-    -fx-border-width:1.5px;
-
-}
-
-.tab-pane{
-    -fx-border-radius:100px 100px 0px 0px; 
-    
-   
-} 
-
-.table-view{
-    -fx-background-color:transparent;
-    -fx-padding:0px;
-    -fx-border-color:linear-gradient(to bottom right, #2d658c, #2ca772);
-    -fx-border-width:1.5px;
-    -fx-border-radius:8px;
-}
-.table-view .table-column{
+/* Estilo para campo de busca */
+.search {
+    -fx-background-color: transparent;
+    -fx-border-color: linear-gradient(to bottom right, #2d658c, #2ca772);
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 8px;
+    -fx-font-family: "Tahoma";
+    -fx-font-size: 16px;
     -fx-alignment: center;
 }
-.table-view .column-header-background{
-    -fx-background-color:linear-gradient(to left, #58DFFF, #5978FF);
-    -fx-background-radius:8px 8px 0px 0px;
-    -fx-background-inset: 0 0 0 0;
-}
-.table-view .column-header, .filter{
-    -fx-background-color:transparent;
-    -fx-size:40px;
-}
-.table-view .column-header .label{
-    -fx-text-fill:#fff;
-    -fx-font-family:"Arial";
+
+.search:focused {
+    -fx-border-width: 1.6px;
+    -fx-border-color: black;
 }
 
-.textfield{
-    -fx-background-color:linear-gradient(to bottom, #efefef, #eee);
-    -fx-background-radius:4px;
-    -fx-border-color:linear-gradient(to bottom right, #2d658c, #2ca772);
-    -fx-border-width:.8px;
-    -fx-font-family:"Tahoma";
-    -fx-border-radius:4px;
-}
-.textfield:focused{
-    -fx-background-color:#fff;
-    -fx-border-width:1px;
+/* Estilo para grade de visualização */
+.grid-view {
+    -fx-padding: 1px;
+    -fx-border-color: linear-gradient(to bottom right, #2d658c, #2ca772);
+    -fx-border-width: 1.5px;
 }
 
-
-.btn-buscar{
-    -fx-background-color:#2d5278;
-    -fx-background-radius:8px;
-    -fx-cursor:hand;
-    -fx-text-fill:#fff;
-    -fx-font-size:14px;
-    -fx-font-family:"Arial";
+/* Estilo para painel de abas */
+.tab-pane {
+    -fx-border-radius: 100px 100px 0px 0px;
 }
-.btn-buscar:hover{
-    -fx-background-color:#2268ae;
+
+/* Estilo para tabela de visualização */
+.table-view {
+    -fx-background-color: transparent;
+    -fx-padding: 0px;
+    -fx-border-color: linear-gradient(to bottom right, #2d658c, #2ca772);
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 8px;
+}
+
+/* Estilo para coluna de tabela */
+.table-view .table-column {
+    -fx-alignment: center;
+}
+
+/* Estilo para cabeçalho de coluna */
+.table-view .column-header-background {
+    -fx-background-color: linear-gradient(to left, #58DFFF, #5978FF);
+    -fx-background-radius: 8px 8px 0px 0px;
+}
+
+/* Estilo para cabeçalho de coluna e filtro */
+.table-view .column-header, .filter {
+    -fx-background-color: transparent;
+}
+
+/* Estilo para label de cabeçalho de coluna */
+.table-view .column-header .label {
+    -fx-text-fill: #fff;
+    -fx-font-family: "Arial";
+}
+
+/* Estilo para campo de texto */
+.textfield {
+    -fx-background-color: linear-gradient(to bottom, #efefef, #eee);
+    -fx-background-radius: 4px;
+    -fx-border-color: linear-gradient(to bottom right, #2d658c, #2ca772);
+    -fx-border-width: .8px;
+    -fx-font-family: "Tahoma";
+}
+
+.textfield:focused {
+    -fx-background-color: #fff;
+    -fx-border-width: 1px;
+}
+
+/* Estilo para botão de buscar */
+.btn-buscar {
+    -fx-background-color: #2d5278;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial";
+}
+
+.btn-buscar:hover {
+    -fx-background-color: #2268ae;
 }

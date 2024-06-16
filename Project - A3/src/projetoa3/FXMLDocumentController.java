@@ -46,12 +46,10 @@ public class FXMLDocumentController implements Initializable {
     @FXML private TableColumn<Game, String> col_cat_alg;
     @FXML private TableColumn<Game, Integer> col_lan_alg;
 
-    // Declaração dos campos de texto para tf_buscar, tf_ciclos_alg/bd e tf_temp_alg/bd
+    // Declaração dos campos de texto para tf_buscar, tf_ciclos_alg/bd
     @FXML private TextField tf_buscar;
     @FXML private TextField tf_ciclo_alg;
     @FXML private TextField tf_ciclo_bd;
-    @FXML private TextField tf_temp_alg;
-    @FXML private TextField tf_temp_bd;
 
     // Declaração dos botões radiais para busca tg_b_linear e tg_b_binary
     // Declaração dos botões radiais para organização tb_o_bubble e tb_o_quick
