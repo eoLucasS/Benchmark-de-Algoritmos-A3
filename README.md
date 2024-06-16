@@ -8,6 +8,12 @@
   <img alt="Repository Size" src="https://img.shields.io/github/repo-size/eolucass/Benchmark-de-Algoritmos-A3?color=00FFFB">
 </p>
 
+## 🎥 Gif de Demonstração
+
+<p align="center">
+  <img src="assets/to-readme/gif-demonstracao.gif" alt="Demonstração do Projeto" width="600" height="338">
+</p>
+
 ## 📝 Descrição
 
 Projeto em Java para comparar a eficiência de busca e ordenação de jogos entre uma ArrayList e consultas SQL, analisando ciclos.
