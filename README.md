@@ -11,7 +11,7 @@
 ## 🎥 Gif de Demonstração
 
 <p align="center">
-  <img src="assets/to-readme/gif-demonstracao.gif" alt="Demonstração do Projeto" width="600" height="338">
+  <img src="Project - A3/assets/to-readme/gif-demonstracao.gif" width="600" height="338">
 </p>
 
 ## 📝 Descrição
