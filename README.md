@@ -115,7 +115,7 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias:
     </td>
         <td align="center">
       <a href="https://www.linkedin.com/in/breno-melo-53822a20a/">
-        <img src="https://media.licdn.com/dms/image/D4E35AQHv4m8boIwRZA/profile-framedphoto-shrink_800_800/0/1643902235318?e=1718895600&v=beta&t=z9K2M3QhCLCkZ0W5fQbPBm3ZAvsuTm5H7U1H3gfWk3Q" width="100px;" /><br>
+        <img src="https://media.licdn.com/dms/image/D4E35AQHv4m8boIwRZA/profile-framedphoto-shrink_800_800/0/1643902235318?e=1719608400&v=beta&t=djZ7bpZ6Ju_Jn3VJ21PGX8SgZOluve2i7xeixPaZkw0" width="100px;" /><br>
         <sub>
           <b>Breno Melo</b>
         </sub>
