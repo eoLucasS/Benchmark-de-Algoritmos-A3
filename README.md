@@ -91,7 +91,7 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias:
   <tr>
     <td align="center">
       <a href="https://www.linkedin.com/in/lucaslopesdasilva/">
-        <img src="https://media.licdn.com/dms/image/D4D03AQGhKFQlheZCnQ/profile-displayphoto-shrink_800_800/0/1694812521940?e=1719446400&v=beta&t=OD6N7c7fNUHNPKp8R5y02gpVE00vwO0W-q0SIJhNaa4" width="100px;" /><br>
+        <img src="https://avatars.githubusercontent.com/u/119815116?v=4" width="100px;" /><br>
         <sub>
           <b>Lucas Silva</b>
         </sub>
@@ -99,7 +99,7 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias:
     </td>
     <td align="center">
       <a href="https://www.linkedin.com/in/nycolasagrgarcia/">
-        <img src="https://media.licdn.com/dms/image/C4E03AQHp2s4N73dbEA/profile-displayphoto-shrink_800_800/0/1658261108787?e=1719446400&v=beta&t=sbktJy5YtTzVpkyyTswHz6s1IUZB6Wk01jfiVbvGqOo" width="100px;" /><br>
+        <img src="https://media.licdn.com/dms/image/C4E03AQHp2s4N73dbEA/profile-displayphoto-shrink_800_800/0/1658261108787?e=1725494400&v=beta&t=bY2v_s927nkomKEakSU8sGp6wDB0Wq94gBu9eHG-7Vw" width="100px;" /><br>
         <sub>
           <b>Nycolas Garcia</b>
         </sub>
@@ -115,7 +115,7 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias:
     </td>
         <td align="center">
       <a href="https://www.linkedin.com/in/breno-melo-53822a20a/">
-        <img src="https://media.licdn.com/dms/image/D4E35AQHv4m8boIwRZA/profile-framedphoto-shrink_800_800/0/1643902235318?e=1719608400&v=beta&t=djZ7bpZ6Ju_Jn3VJ21PGX8SgZOluve2i7xeixPaZkw0" width="100px;" /><br>
+        <img src="https://media.licdn.com/dms/image/D4E35AQHv4m8boIwRZA/profile-framedphoto-shrink_800_800/0/1643902235318?e=1720645200&v=beta&t=PWPA9cCOYU2_ufcEbpZVUgUxD16Wfuu5vv7gTD_i13o" width="100px;" /><br>
         <sub>
           <b>Breno Melo</b>
         </sub>
@@ -123,7 +123,7 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias:
     </td>
         <td align="center">
       <a href="https://www.linkedin.com/in/gustavo-henrique-dev/">
-        <img src="https://media.licdn.com/dms/image/C4D03AQE0q_4_mg4MSA/profile-displayphoto-shrink_800_800/0/1658787057420?e=1719446400&v=beta&t=0grb0SuIoxXvoFzk4OIGys7R5aFIKEAYOq9fskgf-g0" width="100px;" /><br>
+        <img src="https://avatars.githubusercontent.com/u/72585011?v=4" width="100px;" /><br>
         <sub>
           <b>Gustavo Henrique</b>
         </sub>
