@@ -115,7 +115,7 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias:
     </td>
         <td align="center">
       <a href="https://www.linkedin.com/in/breno-melo-53822a20a/">
-        <img src="https://media.licdn.com/dms/image/D4E35AQHv4m8boIwRZA/profile-framedphoto-shrink_800_800/0/1643902235318?e=1720645200&v=beta&t=PWPA9cCOYU2_ufcEbpZVUgUxD16Wfuu5vv7gTD_i13o" width="100px;" /><br>
+        <img src="https://avatars.githubusercontent.com/u/75175303?v=4" width="100px;" /><br>
         <sub>
           <b>Breno Melo</b>
         </sub>
