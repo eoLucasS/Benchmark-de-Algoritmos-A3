@@ -68,7 +68,7 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 - [Apache NetBeans IDE 16](https://archive.apache.org/dist/netbeans/netbeans-installers/16/Apache-NetBeans-16-bin-windows-x64.exe)
 - [XAMPP](http://sourceforge.net/projects/xampp/files/)
 
-## 🔗 Links
+## 🔗 Link's
 
 <p align="left">
 
