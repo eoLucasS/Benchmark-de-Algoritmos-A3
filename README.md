@@ -260,8 +260,8 @@ echo "Software em execução - aguardando interação do usuário"
 
 | Lucas Silva | Nycolas Garcia | Danilo Santos | Breno Melo | Gustavo Henrique |
 |-------------|----------------|---------------|------------|------------------|
-| <a href="https://www.linkedin.com/in/lucaslopesdasilva/"><img src="https://avatars.githubusercontent.com/u/119815116?v=4" width="100px;" /></a> | <a href="https://www.linkedin.com/in/nycolasagrgarcia/"><img src="https://avatars.githubusercontent.com/u/127459801?v=4" width="100px;" /></a> | <a href="https://www.linkedin.com/in/danilodoes/"><img src="https://avatars.githubusercontent.com/u/110133245?v=4" width="100px;" /></a> | <a href="https://www.linkedin.com/in/breno-melo-53822a20a/"><img src="https://avatars.githubusercontent.com/u/75175303?v=4" width="100px;" /></a> | <a href="https://www.linkedin.com/in/gustavo-henrique-dev/"><img src="https://avatars.githubusercontent.com/u/72585011?v=4" width="100px;" /></a> |
-
+| <img src="https://avatars.githubusercontent.com/u/119815116?v=4" width="100px;" /> | <img src="https://avatars.githubusercontent.com/u/127459801?v=4" width="100px;" /> | <img src="https://avatars.githubusercontent.com/u/110133245?v=4" width="100px;" /> | <img src="https://avatars.githubusercontent.com/u/75175303?v=4" width="100px;" /> | <img src="https://avatars.githubusercontent.com/u/72585011?v=4" width="100px;" /> |
+| <a href="https://www.linkedin.com/in/lucaslopesdasilva/"><img src="https://skills.syvixor.com/api/icons?i=linkedin" width="20" /> LinkedIn</a> | <a href="https://www.linkedin.com/in/nycolasagrgarcia/"><img src="https://skills.syvixor.com/api/icons?i=linkedin" width="20" /> LinkedIn</a> | <a href="https://www.linkedin.com/in/danilodoes/"><img src="https://skills.syvixor.com/api/icons?i=linkedin" width="20" /> LinkedIn</a> | <a href="https://www.linkedin.com/in/breno-melo-53822a20a/"><img src="https://skills.syvixor.com/api/icons?i=linkedin" width="20" /> LinkedIn</a> | <a href="https://www.linkedin.com/in/gustavo-henrique-dev/"><img src="https://skills.syvixor.com/api/icons?i=linkedin" width="20" /> LinkedIn</a> |
 </div>
 
 -----
