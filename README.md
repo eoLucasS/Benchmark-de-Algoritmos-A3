@@ -1,76 +1,244 @@
-<h1 align="center">
-  Benchmark de Algoritmos <img width="25px" src="https://raw.githubusercontent.com/EvanderInacio/Portfolio/73b9d0b179efc28c26d11e8d44570901d6f8b520/public/icon.svg"/>
-</h1>
+<div align="center">
 
-<p align="center">
-  <img alt="Github Top Language" src="https://img.shields.io/github/languages/top/eolucass/Benchmark-de-Algoritmos-A3?color=00FFFB">
-  <img alt="Github Language Count" src="https://img.shields.io/github/languages/count/eolucass/Benchmark-de-Algoritmos-A3?color=00FFFB">
-  <img alt="Repository Size" src="https://img.shields.io/github/repo-size/eolucass/Benchmark-de-Algoritmos-A3?color=00FFFB">
-</p>
+  # Benchmark de Algoritmos 
 
-## 🎥 Gif de Demonstração
+  Projeto em Java para comparar a eficiência de busca e ordenação em ArrayList e consultas SQL, analisando ciclos.
 
-<p align="center">
+  [Nosso Objetivo](#nosso-objetivo) | [Stack](#stack) | [Colaboradores](#colaboradores) | [Contato](#contato)
+
   <img src="Project - A3/assets/to-readme/gif-demonstracao.gif" width="600" height="338">
-</p>
 
-## 📝 Descrição
 
-Projeto em Java para comparar a eficiência de busca e ordenação de jogos entre uma ArrayList e consultas SQL, analisando ciclos.
+  Ferramentas:
 
-## 🔧 Funcionalidades
+  ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+  ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=CSS&logoColor=white)
+  ![MySQL](https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+  
+  Detalhes:
+  
+  ![Version](https://img.shields.io/badge/version-0.1.0-grey?style=flat&color=darkgrey)
+  ![Stars](https://img.shields.io/github/stars/eoLucasS/Benchmark-de-Algoritmos-A3?style=flat&color=darkgrey)
+  ![Repo Views](https://komarev.com/ghpvc/?username=eoLucasS&repo=Benchmark-de-Algoritmos-A3&color=lightgrey)
+  ![Languages Count](https://img.shields.io/github/languages/count/eoLucasS/Benchmark-de-Algoritmos-A3?color=lightgrey)
+  ![Top Language](https://img.shields.io/github/languages/top/eolucass/Benchmark-de-Algoritmos-A3?color=lightgrey)
+  
+</div>
 
-- **Buscar Jogos**: Pesquisar um jogo específico pelo nome.
-- **Comparar Métodos**: Comparar a busca e ordenação entre uma ArrayList e o banco de dados.
-- **Visualização dos Resultados**: Exibir os resultados de ciclos para cada método.
+## Nosso Objetivo
 
-## 📊 Algoritmos de Busca e Ordenação
+<div align="center">
 
-- **Bubble Sort**
-- **Quick Sort**
-- **Linear Search**
-- **Binary Search**
+ Comparar a quantidade de ciclos necessários para buscar ou ordenar por determinado jogo, comparando metodos como buscas linear e binary, e ordenações em bubble ou quick
 
-## 🛠 Documentação do Código
+</div>
 
-Toda a documentação do código está presente nos comentários em JavaDoc dentro do código-fonte para facilitar a compreensão das funcionalidades e métodos utilizados.
 
-## ▶️ Como Executar
+## Funcionalidades
 
-1. Baixe o projeto ou faça um clone do repositório.
-2. Abra a pasta "Project - A3" na sua IDE de preferência (recomendamos o NetBeans).
-3. Certifique-se de que o arquivo "games.csv" está presente no diretório de execução na pasta "data".
-4. Compile e execute o projeto na IDE.
-5. O software abrirá diretamente na tela do usuário, permitindo interagir com as funcionalidades disponíveis.
+<details>
+  <summary><b>Busca</b></summary>
 
-## 📝 Pré-Requisitos 
+  - Pesquisar um jogo pelo nome, completo ou parcial
+  - Escolher método de busca: Linear ou Binary
+    
+</details>
+<details>
+  <summary><b>Ordenação</b></summary>
 
-- Documentação do Projeto: <a href="https://docs.google.com/document/d/1yQKc22IEB7giy-7p7YFWQ4cH8sxCx3jOVY9yD0VcSVg/edit?usp=sharing" target="_blank"> Clique aqui </a>
-- Pré-Requisitos: <a href="https://mediacdns3.ulife.com.br/PAT/Upload/3681712/EDAAA3EspecificaodoProjeto_20240415180358.pdf" target="_blank"> Clique aqui </a>  
-- PowerPoint: <a href="https://docs.google.com/presentation/d/1cJ4jwU6Af-JJjkmCRTEW3eIh2bq3Q88mn4mYj5nMqqg/edit?usp=sharing" target="_blank"> Clique aqui </a>  
+  - Ordenar lista por categoria (ID, Nome, Categoria, Data de Lançamento)
+  - Escolher método de ordenação: Bubble Sort ou Quick Sort
+    
+</details>
+<details>
+  <summary><b>Comparação</b></summary>
 
-## 🚀 Tecnologias Utilizadas
+  - Metodos são analisados contra SQL Queries
+  - Resultado de cada método é exibido em ciclos de repetição
+    
+</details>
 
-Este projeto foi desenvolvido utilizando as seguintes tecnologias:
+## Documentação:
 
-  <a href="https://github.com/eoLucasS" target="_blank"><img src="https://img.shields.io/badge/java-323330?style=for-the-badge&logo=java&logoColor=00FFFB" target="_blank"></a>
-  <a href="https://github.com/eoLucasS" target="_blank"><img src="https://img.shields.io/badge/Java%20JDK%208u202-323330?style=for-the-badge&logo=java&logoColor=00FFFB" target="_blank"></a>
-  <a href="https://github.com/eoLucasS" target="_blank"><img src="https://img.shields.io/badge/javafx-323330?style=for-the-badge&logo=javafx&logoColor=00FFFB" target="_blank"></a>
-  <a href="https://github.com/eoLucasS" target="_blank"><img src="https://img.shields.io/badge/mysql-323330?style=for-the-badge&logo=mysql&logoColor=00FFFB" target="_blank"></a>
+- O código-fonte foi devidamente comentado usando o padrão JavaDoc para facilitar a compreensão das funcionalidades e métodos.
+- A documentação do projeto que mostra o planejamento e funcionalidades e plano de desenvolvimento se encontram <a href="https://docs.google.com/document/d/1yQKc22IEB7giy-7p7YFWQ4cH8sxCx3jOVY9yD0VcSVg/edit?usp=sharing" target="_blank"> aqui </a>
+- Os pré-requisitos do projeto tal como requisitados pela instituição se encontram Pré-Requisitos: <a href="https://mediacdns3.ulife.com.br/PAT/Upload/3681712/EDAAA3EspecificaodoProjeto_20240415180358.pdf" target="_blank"> aqui </a>
 
-## 📚 Bibliotecas e Ferramentas
+## Stack
 
-- [Java JDK 8](https://www.oracle.com/br/java/technologies/javase/javase8-archive-downloads.html)
-- [JavaFX Version 22.0.1](https://download2.gluonhq.com/openjfx/22.0.1/openjfx-22.0.1_windows-x64_bin-sdk.zip)
-- [Mysql-Connector-j-8.4.0](https://cdn.discordapp.com/attachments/1197660245556732095/1251681287312379955/mysql-connector-j-8.4.0.rar?ex=666f768a&is=666e250a&hm=371dfcb0553d9bc638a1ad79189f46b03b6da60b1c38d6c845950ce64fd5bf27&)
-- [DataBase Utilizada](https://cdn.discordapp.com/attachments/1197660245556732095/1251688815114977332/games_db.sql?ex=666f7d8c&is=666e2c0c&hm=645e0aba16251717bef22ad6ef1fa84dcac52f6fbf28303a01803a90601cb8ac&)
-- [Scene Builder](https://download2.gluonhq.com/scenebuilder/21.0.0/install/win/SceneBuilder-21.0.0.msi)
-- [Apache NetBeans IDE 16](https://archive.apache.org/dist/netbeans/netbeans-installers/16/Apache-NetBeans-16-bin-windows-x64.exe)
-- [XAMPP](http://sourceforge.net/projects/xampp/files/)
+<div align="center">
 
-## 🔗 Link's
+  | Camada | Ferramentas |
+  |--------|-------------|
+  | Front-End | JavaFX, Scene Builder |
+  | Back-End | Java JDK 8 |
+  | Data | MySQL, MySQL Connector J 8.4.0 |
+  | Ambiente | Apache NetBeans IDE 16, XAMPP |
 
-<p align="left">
+</div>
+
+## Algoritmos de Ordenação (Sort)
+
+<details><summary><b>BubbleSort</b></summary>
+
+O bubble sort (ou ordenação por flutuação) é um algoritmo simples de ordenação que funciona comparando repetidamente pares de elementos adjacentes em uma lista e trocando suas posições quando estão na ordem errada. Esse processo é realizado em múltiplas passadas pela lista.
+
+**Exemplo:**
+
+Dada uma lista **4,1,3,2**, segue um exemplo de Bubble Sort:
+
+<div align="center">
+
+  | Passo | Par | Comparação | Ação | Nova lista |
+  |-------|-----|------------|------|-------------|
+  | 1 | (4,1) | 4 > 1 | troca | [1, 4, 3, 2] |
+  | 2 | (4,3) | 4 > 3 | troca | [1, 3, 4, 2] |
+  | 3 | (4,2) | 4 > 2 | troca | [1, 3, 2, 4] |
+  | 4 | (1,3) | 1 < 3 | mantém | [1, 3, 2, 4] |
+  | 5 | (3,2) | 3 > 2 | troca | [1, 2, 3, 4] |
+
+</div>
+
+Complexidade:
+
+**Pior caso** (lista inversa): O(n²) comparações e trocas.
+**Melhor caso** (já ordenada): O(n) com otimização (interrompe se nenhuma troca ocorrer).
+
+</details>
+<details><summary><b>QuickSort</b></summary>
+
+O QuickSort (ou ordenação rápida) é um algoritmo de ordenação que utiliza a estratégia "dividir para conquistar". Ele funciona escolhendo um elemento chamado **pivô** e reorganizando a lista de forma que todos os elementos menores que o pivô fiquem à sua esquerda, e os maiores à sua direita. Esse processo é aplicado recursivamente às sublistas esquerda e direita.
+
+**Exemplo:**
+
+Dada uma lista **7, 9, 6, 5, 8**, segue um exemplo de QuickSort (pivô = último elemento):
+
+<div align="center">
+
+| Etapa | Sublistas | Pivô | Particionamento (menores, pivô, maiores) | Resultado |
+|-------|----------|------|------------------------------------------|-----------|
+| 1 | [7, 9, 6, 5, 8] | 8 | [7, 6, 5] , 8 , [9] | [7, 6, 5, 8, 9] |
+| 2 | [7, 6, 5] | 5 | [] , 5 , [7, 6] | [5, 7, 6, 8, 9] |
+| 3 | [7, 6] | 6 | [] , 6 , [7] | [5, 6, 7, 8, 9] |
+| 4 | [7] | 7 | [] , 7 , [] | [5, 6, 7, 8, 9] |
+
+</div>
+
+Complexidade:
+
+**Melhor caso** (pivô divide a lista ao meio): O(n log n)
+
+**Pior caso** (pivô é sempre o menor ou maior elemento): O(n²)
+
+</details>
+
+## Algoritmos de Busca (Search)
+
+<details><summary><b>Linear Search</b></summary>
+
+A Busca Linear percorre cada elemento da lista sequencialmente até encontrar o valor desejado ou chegar ao final.
+
+**Exemplo:**
+
+Procurando o valor **6** na lista **[7, 9, 6, 5, 8]** :
+
+
+<div align="center">
+
+| índice | Valor |
+| - | - |
+| 0 | 7 |
+| 1 | 9 |
+| 2 | 6 |
+| 3 | 5 |
+| 4 | 8 |
+
+</div>
+
+O passo a passo seria assim:
+
+<div align="center">
+
+| Passo | Índice | Elemento | Comparação | Resultado |
+|-------|--------|----------|------------|-----------|
+| 1 | 0 | 7 | 7 == 6? | ❌ não |
+| 2 | 1 | 9 | 9 == 6? | ❌ não |
+| 3 | 2 | 6 | 6 == 6? | ✅ **encontrado** |
+
+</div>
+
+> Note que, caso seja realizada uma
+
+Complexidade:
+
+**Melhor caso** (Elemento no início da lista): O(1)
+**Pior caso** (Elemento no final ou ausente): O(n)
+
+</details>
+<details><summary><b>Binary Search</b></summary>
+
+A Busca Binária localiza um elemento em uma **lista ordenada** reduzindo pela metade o intervalo de busca a cada iteração.
+
+**Exemplo:**
+
+Procurando o valor **14** na lista **[11, 12, 13, 14, 15, 16]** :
+
+<div align="center">
+
+| Índice | 0 | 1 | 2 | 3 | 4 | 5 |
+|--------|---|---|---|---|---|---|
+| Valor | 11 | 12 | 13 | 14 | 15 | 16 |
+
+</div>
+
+**Visualização do intervalo de busca:**
+
+<div align="center">
+
+| Passo | Intervalo ativo | Meio | Comparação | Novo intervalo |
+|-------|----------------|------|------------|----------------|
+| 1 | [11, 12, 13, 14, 15, 16] | 13 | 13 < 14 | [14, 15, 16] |
+| 2 | [14, 15, 16] | 15 | 15 > 14 | [14] |
+| 3 | [14] | 14 | 14 == 14 | ✅ encontrado |
+
+</div>
+
+ **Importante:**
+ >A Busca Binária exige que a lista esteja **ordenada** previamente. Caso contrário, o algoritmo não funciona corretamente.
+
+Complexidade:
+
+**Melhor caso** (Elemento exatamente no meio): O(1)
+
+**Pior caso** (Elemento em qualquer posição ou ausente): O(log n)
+
+</details>
+
+## Instalação e Uso
+
+```bash
+# 1. Baixe o projeto ou faça um clone do repositório
+git clone <url-do-repositorio>
+
+# 2. Abra a pasta "Project - A3" na sua IDE de preferência (recomendamos o NetBeans)
+cd "Project - A3"
+
+# 3. Certifique-se de que o arquivo "games.csv" está presente no diretório de execução na pasta "data"
+ls data/games.csv
+
+# 4. Compile e execute o projeto na IDE
+# No NetBeans: Clique em "Run Project" (F6)
+# Ou via linha de comando (se for um projeto Java):
+javac src/*.java
+java -cp src Main
+
+# 5. O software abrirá diretamente na tela do usuário, permitindo interagir com as funcionalidades disponíveis
+echo "Software em execução - aguardando interação do usuário"
+```
+
+## Contato
+
+<p align="center">
 
  <a href="https://www.linkedin.com/in/lucaslopesdasilva/" alt="Linkedin">
   <img src="https://img.shields.io/badge/-Linkedin-000?style=for-the-badge&logo=Linkedin&logoColor=0A66C2&link=https://www.linkedin.com/in/lucaslopesdasilva/"/> 
@@ -86,51 +254,15 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 
  </p>
  
-## 💻 Colaboradores<br>
-<table>
-  <tr>
-    <td align="center">
-      <a href="https://www.linkedin.com/in/lucaslopesdasilva/">
-        <img src="https://avatars.githubusercontent.com/u/119815116?v=4" width="100px;" /><br>
-        <sub>
-          <b>Lucas Silva</b>
-        </sub>
-      </a>
-    </td>
-    <td align="center">
-      <a href="https://www.linkedin.com/in/nycolasagrgarcia/">
-        <img src="https://media.licdn.com/dms/image/C4E03AQHp2s4N73dbEA/profile-displayphoto-shrink_800_800/0/1658261108787?e=1725494400&v=beta&t=bY2v_s927nkomKEakSU8sGp6wDB0Wq94gBu9eHG-7Vw" width="100px;" /><br>
-        <sub>
-          <b>Nycolas Garcia</b>
-        </sub>
-      </a>
-    </td>
-    <td align="center">
-      <a href="https://www.linkedin.com/in/danilodoes/">
-        <img src="https://avatars.githubusercontent.com/u/110133245?v=4" width="100px;" /><br>
-        <sub>
-          <b>Danilo Santos</b>
-        </sub>
-      </a>
-    </td>
-        <td align="center">
-      <a href="https://www.linkedin.com/in/breno-melo-53822a20a/">
-        <img src="https://avatars.githubusercontent.com/u/75175303?v=4" width="100px;" /><br>
-        <sub>
-          <b>Breno Melo</b>
-        </sub>
-      </a>
-    </td>
-        <td align="center">
-      <a href="https://www.linkedin.com/in/gustavo-henrique-dev/">
-        <img src="https://avatars.githubusercontent.com/u/72585011?v=4" width="100px;" /><br>
-        <sub>
-          <b>Gustavo Henrique</b>
-        </sub>
-      </a>
-    </td>
-  </tr>
-</table>
+## Colaboradores
+
+<div align="center">
+
+| Lucas Silva | Nycolas Garcia | Danilo Santos | Breno Melo | Gustavo Henrique |
+|-------------|----------------|---------------|------------|------------------|
+| <a href="https://www.linkedin.com/in/lucaslopesdasilva/"><img src="https://avatars.githubusercontent.com/u/119815116?v=4" width="100px;" /></a> | <a href="https://www.linkedin.com/in/nycolasagrgarcia/"><img src="https://avatars.githubusercontent.com/u/127459801?v=4" width="100px;" /></a> | <a href="https://www.linkedin.com/in/danilodoes/"><img src="https://avatars.githubusercontent.com/u/110133245?v=4" width="100px;" /></a> | <a href="https://www.linkedin.com/in/breno-melo-53822a20a/"><img src="https://avatars.githubusercontent.com/u/75175303?v=4" width="100px;" /></a> | <a href="https://www.linkedin.com/in/gustavo-henrique-dev/"><img src="https://avatars.githubusercontent.com/u/72585011?v=4" width="100px;" /></a> |
+
+</div>
 
 -----
 
